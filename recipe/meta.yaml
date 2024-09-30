@@ -1,6 +1,5 @@
 {% set version = '0.1.0' %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-cancerr
@@ -13,8 +12,7 @@ source:
   sha256: 20caf9d40951b6cfcebdd8f92b2aaffb1f511bc6edd05936afb41753fe69640a
 
 build:
-  merge_build_host: True  # [win]
-  number: 0
+  number: 1
   noarch: generic
   rpaths:
     - lib/R/lib/
