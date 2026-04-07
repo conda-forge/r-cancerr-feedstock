@@ -1,4 +1,4 @@
-{% set version = '0.1.0' %}
+{% set version = "0.1.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/cancerR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/cancerR/cancerR_{{ version }}.tar.gz
-  sha256: 20caf9d40951b6cfcebdd8f92b2aaffb1f511bc6edd05936afb41753fe69640a
+  sha256: f3b79f3aae795dde32a62583bd3c4c55668c678c823f8634e48de33af48a2acd
 
 build:
-  number: 2
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -39,13 +39,9 @@ test:
 about:
   home: https://github.com/giancarlodigi/cancerR
   license: GPL-2.0-or-later
-  summary: Classifies the type of cancer using routinely collected data commonly found in cancer
-    registries from pathology reports. The package implements the International Classification
-    of Diseases for Oncology, 3rd Edition site (topography), histology (morphology),
-    and behaviour codes of neoplasms to classify cancer type <https://www.who.int/standards/classifications/other-classifications/international-classification-of-diseases-for-oncology>.
-    Classification in children utilize the International Classification of Childhood
-    Cancer by Steliarova-Foucher et al. (2005) <doi:10.1002/cncr.20910>. Adolescent
-    and young adult cancer classification is based on Barr et al. (2020) <doi:10.1002/cncr.33041>.
+  summary: Classifies the type of cancer using routinely collected data commonly found in cancer registries from pathology reports. The package implements the International Classification of Diseases for Oncology, 3rd Edition site (topography), histology (morphology), and behaviour codes of neoplasms to classify cancer
+    type <https://www.who.int/standards/classifications/other-classifications/international-classification-of-diseases-for-oncology>. Classification in children utilize the International Classification of Childhood Cancer by Steliarova-Foucher et al. (2005) <doi:10.1002/cncr.20910>. Adolescent and young adult cancer 
+    classification is based on Barr et al. (2020) <doi:10.1002/cncr.33041>.
   license_family: GPL2
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
